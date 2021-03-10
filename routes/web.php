@@ -23,3 +23,9 @@ $router->get('/', function () use ($router) {
 $router->get('/key', function() {
     return Str::random(32);
 });
+
+//Trash
+$router->group(['namespace' => 'Trash'], function() use ($router)
+{
+    $router->get('retrash/category/{id_type}', 'TypeTrashController@showType');
+});

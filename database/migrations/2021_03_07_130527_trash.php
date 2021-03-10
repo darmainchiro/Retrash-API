@@ -20,6 +20,8 @@ class Trash extends Migration
             $table->string('gambar');
             $table->timestamps();
 
+            $table->foreign('id_type')->references('id')->on('category');
+
         });
     }
 

@@ -27,7 +27,7 @@ $router->get('/key', function() {
 //Trash
 $router->group(['namespace' => 'Trash'], function() use ($router)
 {
-    $router->get('retrash/category/{id_type}', 'TypeTrashController@showType');
+    $router->get('retrash/category/{category}', 'TypeTrashController@showType');
     $router->get('retrash/{id}', 'TypeTrashController@show');
 
 });

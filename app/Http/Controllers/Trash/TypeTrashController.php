@@ -6,9 +6,9 @@ use App\Models\TypeTrash;
 
 class TypeTrashController extends Controller
 {
-    public function showType($id_type)
+    public function showType($category)
     { 
-        $typeTrash = TypeTrash::where("type_trash.id_type",$id_type)
+        $typeTrash = TypeTrash::where("category.category",$category)
                 ->join('category','type_trash.id_type','=','category.id')
                 ->select('type_trash.*','category.category')
                 ->get();
